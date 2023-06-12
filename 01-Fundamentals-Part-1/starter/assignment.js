@@ -199,8 +199,6 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100){
     console.log('no team win the trophy');
 }
 
-*/
-
 // Coding challenges //
 
 const bill = 275;
@@ -208,3 +206,15 @@ const bill = 275;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`);
+*/
+
+// Functions //
+
+function describeCountry(country, population, capitalCity){
+    const countryInfo = `${country} has ${population} million people
+    and its capital city is ${capitalCity}`;
+    return countryInfo;
+}
+
+const somIfo = describeCountry('Somalia', 18, 'Mogadishu');
+console.log(somIfo);
