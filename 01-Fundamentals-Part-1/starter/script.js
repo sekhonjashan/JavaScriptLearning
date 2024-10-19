@@ -54,3 +54,6 @@
 
 // const str = `I'm ${firstName} ${lastName}.`;
 // console.log(str);
+
+const age = 24;
+console.log(`I am ${age >= 18 ? "big" : "small"}`)
