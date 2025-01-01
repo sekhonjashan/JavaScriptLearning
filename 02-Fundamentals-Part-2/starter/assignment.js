@@ -274,7 +274,7 @@ function describPopulation(country, population){
 console.log(describPopulation('China', 1441));
 console.log(describPopulation('Somalia', 18));
 console.log(describPopulation('Kenya', 47));
-*/
+
 
 
 
@@ -311,21 +311,199 @@ console.log(describPopulation('Kenya', 47));
 // console.log(checkWinner((85+54+41), (23+34+27)));
 
 /////////////////
-// const calcAverage = (a, b, c) => (a + b + c) / 3;
-// // console.log(calcAverage(3, 4, 5));
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+// console.log(calcAverage(3, 4, 5));
  
-// let scoreDolphins = calcAverage(44, 23, 71);
-// let scoreKoalas = calcAverage(65, 54, 49);
-// console.log(scoreDolphins, scoreKoalas);
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
  
-// const checkWinner = function (avgDolphins, avgKoalas) {
-//   if (avgDolphins >= 2 * avgKoalas) {
-//     console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-//   } else if (avgKoalas >= 2 * avgDolphins) {
-//     console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-//   } else {
-//     console.log('No team wins...');
-//   }
-// };
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log('No team wins...');
+  }
+};
  
-// checkWinner(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
+
+
+// Intorduction to Arrays//
+
+
+
+const populationsPer = [18, 30, 108, 25];
+
+function percentageOfWorld2(population){
+    return (population/7900)*100;
+    }
+
+  
+
+    const pops = [percentageOfWorld2(populationsPer[0]),
+     percentageOfWorld2(populationsPer[1]), 
+        percentageOfWorld2(populationsPer[2]),
+        percentageOfWorld2(populationsPer[populationsPer.length-1])];
+
+        console.log(pops);
+
+       
+
+       // Basic Array Operations //
+        const neighbours = ['Djabuti', 'Kenya', 'Euthopia'];
+      neighbours.push('Utopia');
+      neighbours.pop();
+    //   console.log(neighbours);
+    
+    if (!neighbours.includes('Germany')){
+        console.log('Probably dont a central European country :D');
+    } 
+
+    neighbours[2] = 'Rowanda';
+    console.log(neighbours);
+
+   // Introduction to Objects //
+
+    const myCountry = {
+       country: 'Somalia',
+       capital: 'Mogadishu',
+       language: 'Somali',
+       neighbours: ['Djabuti', 'Kenya', 'Euthopia'],
+       populaton: 18
+    }
+    
+
+    
+    // Dot vsBracket Notation //
+    console.log(`${myCountry.country} has ${myCountry.populaton} Million ${myCountry.language}-speaking people,
+    ${myCountry.neighbours.length} neighbouring countries and capital called ${myCountry.capital}`);
+    
+    myCountry.populaton += 2;
+    myCountry['populaton'] -= 2;
+    console.log(myCountry)
+   
+
+
+    // Coding Challenge 3 //
+
+    const mark = {
+        fullName: 'Mark Miller',
+        mass: 78,
+        height: 1.69,
+
+        calcBMI: function () {
+            this.bmi = this.mass / this.height ** 2;
+           return this.bmi;
+        }
+
+    }
+
+    const john = {
+        fullName: 'John Smith',
+        mass: 92,
+        height: 1.95,
+        // hasHigherBMI: false,
+
+        calcBMI: function () {
+            this.bmi = this.mass / this.height ** 2;
+           return this.bmi;
+        }
+
+        // higherBMI: function(){
+        //     return  `${john.fullName}'s BMI (${john.bmi}) ${this.hasHigherBMI ? 'is' : 'is not'} 
+        //     higher than ${mark.fullName}'s BMI (${mark.bmi}).`
+        // }
+
+    }
+    mark.calcBMI();
+    john.calcBMI();
+
+    console.log(john.bmi, mark.bmi);
+    //  console.log(john.higherBMI());
+    // or
+    //  mark.calcBMI();
+    //  console.log(mark.bmi);
+
+    if(mark.bmi > john.bmi){
+        console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`);
+    } else if(john.bmi > mark.bmi){
+       console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`);
+    }
+
+     
+
+    //  Assignment- Iteratin: The for  loop //
+
+    for (let i = 1; i <= 50; i++){
+        console.log(`Voter number ${i} is currently voting`);
+    }
+
+    
+
+    // Looping Arrays, Breaking and Continuing 
+    const populations = [18, 30, 108, 25];
+     const percentages2 = [];
+
+    for(let i = 0; i < populations.length; i++){  
+       console.log(populations[i]);
+    
+ const perc = percentageOfWorld2(populations[i]);
+            percentages2.push(perc);
+           
+    }
+
+     console.log(percentages2);
+
+// The assignment above didn't work for me //
+
+
+
+// Looping Backwardss and loops in loops//
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 
+'Russia']];
+
+for(let i = 0; i < listOfNeighbours.length; i++){
+    // console.log(listOfNeighbours[i]);
+
+    for(let j = 0; j < listOfNeighbours[i].length; j++){
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+    }
+}
+
+*/
+
+// Coding Challenge //
+const calcTip = function (bill) {
+return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+
+for(let i = 0; i < bills.length; i++){
+
+const tip = calcTip(bills[i]);
+tips.push(tip);
+totals.push(tip + bills[i]);
+
+}
+
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr){
+    let sum = 0;
+
+    for(let i = 0; i < arr.length; i++){
+        sum+=arr[i];
+
+    }
+ return sum/arr.length;
+}
+
+console.log(calcAverage(totals));
+   
