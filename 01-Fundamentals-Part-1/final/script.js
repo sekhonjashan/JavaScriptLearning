@@ -1,3 +1,28 @@
+let js = "amazing";
+//if (js === "amazing") alert("Javascript is FUN!")
+console.log(40 + 8 + 23 - 10);
+console.log("Faizan")
+
+let firstName = "faizan aqeel"
+console.log(firstName)
+console.log(firstName)
+
+console.log(firstName)
+console.log(firstName)
+
+//Uncaught SyntaxError: Invalid or unexpected token (at script.js:13:5)Understand this errorAI
+//let 3years = 3; 
+//variable cannot start with a number
+
+//let faian& aqeel = "JM"
+
+//reserved keywords cannot be used as well in Javascript.
+//new is a reserved word
+//but it can still be used by adding a dollar $ Sign as you can see below
+// new , function, name and etc...
+
+let $new = 17;
+
 /*
 ////////////////////////////////////
 // Linking a JavaScript File
