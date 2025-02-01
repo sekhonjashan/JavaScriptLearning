@@ -175,49 +175,59 @@ addArrow(2, 5, 8);
 
 
 ///////////////////////////////////////
-// Object References in Practice (Shallow vs. Deep Copies)
+// Objects vs. primitives
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
 
-const jessica1 = {
-  firstName: 'Jessica',
-  lastName: 'Williams',
-  age: 27,
+const me = {
+  name: 'Jonas',
+  age: 30,
 };
+const friend = me;
+friend.age = 27;
+console.log('Friend:', friend);
+console.log('Me', me);
 
-function marryPerson(originalPerson, newLastName) {
-  originalPerson.lastName = newLastName;
-  return originalPerson;
-}
 
-const marriedJessica = marryPerson(jessica1, 'Davis');
+///////////////////////////////////////
+// Primitives vs. Objects in Practice
 
-// const marriedJessica = jessica1;
-// marriedJessica.lastName = 'Davis';
+// Primitive types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
 
-console.log('Before:', jessica1);
-console.log('After:', marriedJessica);
-
+// Reference types
 const jessica = {
   firstName: 'Jessica',
   lastName: 'Williams',
   age: 27,
-  familiy: ['Alice', 'Bob'],
+};
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage: ', marriedJessica);
+// marriedJessica = {};
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
 };
 
-// Shallow copy
-const jessicaCopy = { ...jessica };
+const jessicaCopy = Object.assign({}, jessica2);
 jessicaCopy.lastName = 'Davis';
 
-// jessicaCopy.familiy.push('Mary');
-// jessicaCopy.familiy.push('John');
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
 
-// console.log('Before:', jessica);
-// console.log('After:', jessicaCopy);
-
-// Deep copy/clone
-const jessicaClone = structuredClone(jessica);
-jessicaClone.familiy.push('Mary');
-jessicaClone.familiy.push('John');
-
-console.log('Original:', jessica);
-console.log('Clone:', jessicaClone);
+console.log('Before marriage:', jessica2);
+console.log('After marriage: ', jessicaCopy);
 */
+
