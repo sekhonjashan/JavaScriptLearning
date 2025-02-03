@@ -13,3 +13,14 @@
 
 // console.log("23" - "10" - 3);
 // console.log("23" + "10" + 3);
+
+// 21. Truthy and Falsy Values
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Wilfred"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const myHeading = document.querySelector("h1");
+myHeading.textContent = "Hello World";
