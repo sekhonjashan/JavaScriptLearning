@@ -236,7 +236,6 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log("Someone else should drive...");
 }
-*/
 
 const day = "monday";
 
@@ -277,3 +276,16 @@ if (day === "monday") {
 } else {
   console.log("Not a valid day!");
 }
+*/
+
+// Expressions
+3 + 4;
+1991;
+true && false && !false;
+
+// Statements
+if (23 > 10) {
+  const str = "23 is bigger";
+}
+
+console.log(`I'm ${2037 - 1991} years old`);
