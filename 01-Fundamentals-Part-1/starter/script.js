@@ -45,7 +45,7 @@ year = 1991;
 console.log(typeof year);
 
 console.log(typeof null);
-*/
+
 let age = 31;
 age = 32;
 
@@ -59,3 +59,33 @@ job = "teacher";
 
 lastName = "Peper";
 console.log(lastName);
+*/
+
+// Math operators
+const now = 2025;
+const ageTorben = now - 1993;
+const ageSarah = now - 2018;
+console.log(ageTorben, ageSarah);
+
+console.log(ageTorben * 2, ageTorben / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
+
+const firstName = "Torben";
+const lastName = "Peper";
+console.log(firstName + " " + lastName);
+
+// Assignment operators
+let x = 10 + 5; // 15
+x += 10; // x = x +10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1 = 101
+x--; // x = x - 1 = 100
+console.log(x);
+
+// Comparion operators
+console.log(ageTorben > ageSarah); // >, <, >=, <=
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1993 > now - 2018);
