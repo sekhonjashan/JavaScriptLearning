@@ -17,11 +17,16 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'Correct number!';
     document.querySelector('.number').textContent = secretNumber;
 
-    score--;
     document.querySelector('.score').textContent = score;
 
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+
+    if (score > highScore) {
+      highScore = score;
+
+      document.querySelector('.highscore').textContent = highScore;
+    }
 
     // When guess is too high
   } else if (guess > secretNumber) {
@@ -48,11 +53,6 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-  // Compare score to high score
-  if (score > highScore) {
-    document.querySelector('.highscore').textContent = score;
-  }
-
   // Restore score and regenerate new random number
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
