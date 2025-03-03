@@ -297,53 +297,58 @@ const {
 } = users[1];
 // console.log(name, city);
 
-
+*/
+/*
 // Destructuring objects
 // 2.1
+
 const { title, author, ISBN } = books[0];
 // console.log(title, author, ISBN);
 
-//2.2
+// 2.2
 const { keywords: tags } = books[0];
 // console.log(tags);
 
-//2.3
+// 2.3
 const { language, programmingLanguage = 'unknown' } = books[6];
 // console.log(language, programmingLanguage);
 
-//2.4
+// 2.4
 let bookTitle = 'unknown';
 let bookAuthor = 'unknown';
+// console.log(bookTitle, bookAuthor);
 
 ({ title: bookTitle, author: bookAuthor } = books[0]);
 // console.log(bookTitle, bookAuthor);
 
-//2.5
+// 2.5
 const {
   thirdParty: {
     goodreads: { rating: bookRating },
   },
 } = books[0];
-// console.log(bookRating);
 
-//2.6
-const printBookInfo = function ({ title, author, year = 'year unknown' }) {
+//console.log(bookRating);
+
+// 2.6
+const printBookInfo = function ({
+  title,
+  author,
+  publicationDate: year = 'year unknown',
+}) {
   console.log(`${title} by ${author}, ${year}`);
 };
 
 printBookInfo(books[0]);
 */
+// The Spread Operator
+// 3.1
+const bookAuthors = [...books[0].author, ...books[1].author];
+// console.log(bookAuthors);
 
-// AI exercise 1
-// const { title, author, publisher, publicationDate, ISBN } = books[0];
+// 3.2
+const spellWord = function (str) {
+  console.log(...str);
+};
 
-// console.log(title, author[0], publisher, publicationDate);
-
-// const {
-//   thirdParty: {
-//     goodreads: { rating, ratingsCount, reviewsCount, fiveStarRatingCount },
-//   },
-// } = books[1];
-// // console.log(rating, ratingsCount, reviewsCount, fiveStarRatingCount);
-
-// const {title, keywords[k1, k2]} = books[0];
+// spellWord('test');
