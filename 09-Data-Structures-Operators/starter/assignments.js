@@ -340,7 +340,7 @@ const printBookInfo = function ({
 };
 
 printBookInfo(books[0]);
-*/
+
 // The Spread Operator
 // 3.1
 const bookAuthors = [...books[0].author, ...books[1].author];
@@ -377,3 +377,35 @@ printBookAuthorsCount(
   'The Personal MBA: Master the Art of Business',
   'Josh Kaufman'
 );
+*/
+
+// Short Circuiting (&& and ||)
+// 5.1
+// const hasExamplesInJava = function (book) {
+//   return book.programmingLanguage === 'Java' || 'No data available';
+// };
+
+// hasExamplesInJava(books[1]);
+
+// 5.2
+// for (let i = 0; i < books.length; i++) {
+//   books[i].onlineContent &&
+//     console.log(`${books[i].title} provides online content`);
+// }
+
+// 6.1
+// for (let i = 0; i < books.length; i++) {
+//   books[i].onlineContent ??
+//     console.log(`${books[i].title} provides no data about its online content.`);
+// }
+
+// Logical assignments operators
+// 7.1
+// for (let i = 0; i < books.length; i++) {
+//   books[i].edition ||= 1;
+// }
+
+//7.2
+// for (let i = 0; i < books.length; i++) {
+//   (books[i].thirdParty.goodreads.rating < 4.2) &&= false;
+// }
