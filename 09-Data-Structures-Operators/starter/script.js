@@ -18,6 +18,24 @@ const openingHours = {
   },
 };
 
+const italianFoods = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+]);
+
+const mexicanFoods = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
+
 // Data needed for first part of the section
 const restaurant = {
   name: 'Classico Italiano',
