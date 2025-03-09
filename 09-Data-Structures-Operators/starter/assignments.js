@@ -223,6 +223,27 @@ const books = [
     },
     highlighted: true,
   },
+  {
+    title: 'Deep Work: Rules for Focused Success in a Distracted World',
+    author: 'Cal Newport',
+    publisher: 'Grand Central Publishing',
+    publicationDate: '2016-01-05',
+    edition: 1,
+    pages: 296,
+    format: 'hardcover',
+    ISBN: '9781455586691',
+    language: 'English',
+    thirdParty: {
+      goodreads: {
+        rating: 4.19,
+        ratingsCount: 144584,
+        reviewsCount: 11598,
+        fiveStarRatingCount: 63405,
+        oneStarRatingCount: 1808,
+      },
+    },
+    highlighted: true,
+  },
 ];
 
 /*
@@ -377,7 +398,6 @@ printBookAuthorsCount(
   'The Personal MBA: Master the Art of Business',
   'Josh Kaufman'
 );
-*/
 
 // Short Circuiting (&& and ||)
 // 5.1
@@ -409,3 +429,95 @@ printBookAuthorsCount(
 // for (let i = 0; i < books.length; i++) {
 //   (books[i].thirdParty.goodreads.rating < 4.2) &&= false;
 // }
+
+// 8.1
+// let pageSum = 0;
+
+// for (const book of books) {
+//   pageSum += book.pages;
+// }
+
+// console.log(pageSum);
+
+// 8.2
+
+// Loop over every book
+// Check whether the author property is either a string or an array
+// If it is a string: add it to allAuthors
+// If it is an array: loop over that array. Per loop, add the author  to the array.
+
+const allAuthors = [];
+
+for (const book of books) {
+  if (typeof book.author === 'string') {
+    allAuthors.push(book.author);
+  } else {
+    for (const author of book.author) {
+      allAuthors.push(author);
+    }
+  }
+}
+
+// console.log(allAuthors);
+
+8.3;
+for (const author of allAuthors.entries()) {
+  console.log(`${author[0] + 1}. ${author[1]}`);
+}
+*/
+
+// 9.1
+const bookData = [
+  ['title', 'Computer Networking: A Top-Down Approach'],
+  ['author', ['James F. Kurose', 'Keith W. Ross']],
+  ['publisher', 'Addison Wesley'],
+];
+
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+};
+// console.log(newBook);
+
+// 9.2
+const pages = 880;
+
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  pages,
+};
+
+// console.log(newBook2);
+
+// 10.1
+// const getFirstKeyword = function (book) {
+//   return book.keywords?.[0];
+// };
+
+// console.log(getFirstKeyword(books[8]));
+
+// 11.1
+const entries = [];
+
+const ratings = Object.keys(books[0].thirdParty.goodreads);
+
+for (const key of ratings) {
+  entries.push([key]);
+}
+
+// console.log(entries);
+
+// 11.2
+
+for (const [index, value] of Object.values(
+  books[0].thirdParty.goodreads
+).entries()) {
+  entries[index].push(value);
+}
+
+// 11.3
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+
+console.log(entries2);
