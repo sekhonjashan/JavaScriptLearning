@@ -223,27 +223,6 @@ const books = [
     },
     highlighted: true,
   },
-  {
-    title: 'Deep Work: Rules for Focused Success in a Distracted World',
-    author: 'Cal Newport',
-    publisher: 'Grand Central Publishing',
-    publicationDate: '2016-01-05',
-    edition: 1,
-    pages: 296,
-    format: 'hardcover',
-    ISBN: '9781455586691',
-    language: 'English',
-    thirdParty: {
-      goodreads: {
-        rating: 4.19,
-        ratingsCount: 144584,
-        reviewsCount: 11598,
-        fiveStarRatingCount: 63405,
-        oneStarRatingCount: 1808,
-      },
-    },
-    highlighted: true,
-  },
 ];
 
 /*
@@ -464,7 +443,6 @@ for (const book of books) {
 for (const author of allAuthors.entries()) {
   console.log(`${author[0] + 1}. ${author[1]}`);
 }
-*/
 
 // 9.1
 const bookData = [
@@ -521,3 +499,36 @@ for (const [index, value] of Object.values(
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
 
 console.log(entries2);
+*/
+
+// 12.1
+const allKeywords = [];
+
+for (const book of books) {
+  allKeywords.push(...book.keywords);
+}
+
+// console.log(allKeywords);
+
+// 12.2
+const uniqueKeywords = new Set(allKeywords);
+
+// console.log(uniqueKeywords);
+
+// 12.3
+uniqueKeywords.add('coding');
+uniqueKeywords.add('science');
+
+// console.log(uniqueKeywords);
+
+// 12.4
+uniqueKeywords.delete('business');
+// console.log(uniqueKeywords);
+
+// 12.5
+const uniqueKeywordsArr = [...uniqueKeywords];
+// console.log(uniqueKeywordsArr);
+
+// 12.6
+uniqueKeywords.clear();
+console.log(uniqueKeywords);
