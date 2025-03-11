@@ -204,44 +204,6 @@ const addVAT2 = addTax2(0.23);
 console.log(addVAT2(1000));
 */
 
-/*
-///////////////////////////////////////////////////////////////////////
-// BreadFast Interview
-const multiply = function (a, b) {
-  let i = 0;
-  let product = 0;
-  while (i < Math.abs(b)) {
-    product += a;
-    i++;
-  }
-  // console.log(product);
-  if (b < 0 && product < 0) product = Math.abs(product);
-  else if (b < 0 && product > 0) product = 0 - product;
-  return product;
-};
-
-const multiplyReview = function (a, b) {
-  let i = 0;
-  let product = 0;
-
-  // convert into For Loop because of readability
-  for (let i = 0; i < Math.abs(b); ++i) product += a;
-
-  // convert into ternary operator as if b is a negative number, so negate product
-  if (b < 0) product = product < 0 ? Math.abs(product) : 0 - product;
-
-  return product;
-};
-
-console.log(multiplyReview(3, 5) === 15), multiplyReview(3, 5);
-console.log(multiplyReview(-3, 5) === -15, multiplyReview(-3, 5));
-console.log(multiplyReview(-3, -5) === 15, multiplyReview(-3, -5));
-console.log(multiplyReview(3, -5) === -15, multiplyReview(3, -5));
-console.log(multiplyReview(0, -5) === 0, multiplyReview(0, -5));
-console.log(multiplyReview(0, 5) === 0, multiplyReview(0, 5));
-console.log(multiplyReview(5, 0) === 0, multiplyReview(5, 0));
-*/
-
 ///////////////////////////////////////
 // Coding Challenge #1
 
