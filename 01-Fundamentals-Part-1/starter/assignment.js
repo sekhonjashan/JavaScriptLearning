@@ -1,220 +1,150 @@
+//Assignment 1: Values and Variables //
+
+// Declare variables called 'country', 'continent' and 'population' and 
+// assign their values according to your own country (population in millions)
+
 /*
+let country = "Somalia";
+let continent = "Africa";
+let population = "18 million People";
 
-// Values variables // 
-
-var continent;
-var country;
-var population;
-
-continent = "Africa";
-country = "Somalia";
-population = 30;
-
-console.log(continent);
 console.log(country);
-console.log(population +' ' + "Million");
-
-// Data Type //
-
-var isIsland = true;
-console.log(isIsland);
-console.log(typeof isIsland);
-
-
-
-// let const and var
-
-const language = "English";
-console.log(language);
-
-// Basic Operator
-population++;
-console.log(population / 2 + ' ' + 'Million');
+console.log(continent);
 console.log(population);
 
-var popFinland = 6;
 
-console.log(popFinland > population);
-console.log(population < 33);
+// Declare a variable called 'isIsland' and set its value according to your 
+// country. The variable should hold a Boolean value. Also declare a variable 
+// 'language', but don't assign it any value yet 
 
-var description;
+let isIsland = true;
 
-description = country + ' is in '  + continent + ' and its '  +
-population + ' Million people speak ' + language;
+let language;
+
+console.log(isIsland);
+console.log(language);
+
+// let, const and var //
+
+var language = 'Somali';
+console.log(language);
+// language = 'Arabic';
+console.log(language);
+
+//  Basic Operators //
+
+const country = "Somalia";
+const continent = "Africa";
+let population = 18;
+// population++;
+// console.log(population / 2);
+
+// population > findlandPop ? console.log('Somalia has more population than Findland') : console.log('Findland has more population than Somalia');
+
+console.log(population > 6);
+console.log(population > 33);
+
+const description =  'Somalia' + ' is' + ' in' + ' ' +  continent + ' and' + ' its' + ' ' + population + ' Million' + ' People' + ' speak' + ' ' + language;
 
 console.log(description);
 
-var desSomalia = `${country} is in ${continent} and its ${population} 
-Million people speak ${language}`
-console.log(desSomalia);
+// Strings and Template Literals //
 
-/*
-// if & else statement //
+const description1 = `Somalia is in ${continent} , and its ${population} Million people speak ${language}`
+console.log(description1);
+
+// Taking Decisions: if / else Statements //
 
 if(population > 33){
-    console.log("Somalia's Population is above the average");
+    console.log(`${country}'s population is above average`)
 } else{
-    console.log("Somalia's population is 18 million below average");
-
-}
-
+    console.log(`Somali's population is ${33 - population} million below average`)
+} console.log(population);
 
 
-// Type conversion and coercion
+// Type Conversion and Coercion //
 
-console.log('9' - '5');    // 4
-console.log('19' - '13' + '17');  // '617'
-console.log('19' - '13' + 17);  // 23
-console.log('123' < 57);    //true
-console.log(5 + 6 + '4' + 9 - 4 - 2);  '1143'
+console.log('9' - '5'); // 4
+console.log('19' - '13' + '17'); // 167
+console.log('19' - '13' + 17); // 23
+console.log('123' < 57); // False
+console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
+
+// Equality Operators: == vs. === //
 
 
+// const numNeighbours =  Number (prompt('How many neighbour countries does your country have?')); 
 
-// Equaity Operators //
-
-const numNeighbours =(Number(prompt('How many neighbour countries does your country have?')));
-
-if(numNeighbours === 1){
-    console.log('Only 1 border')
-} else if(numNeighbours > 1){
-    console.log('More than 1 border')
+if (numNeighbours === 1){
+    console.log('Only 1 border');
+} else if (numNeighbours > 1){
+    console.log('More than 1 border');
 } else {
-    console.log('No borders')
+    console.log('No borders');
 }
-
-
 
 
 
 // Logical Operators //
 
-if(language === "English" && population < 50 &&  isIsland === true) {
-    console.log('You should live in Somalia :)');
- } else {
-    console.log('Somalia does not meet your criteria :(');
- }
+const country = "Somalia";
+const continent = "Africa";
+let language = 'English'
+let population = 18;
+const isIsland = true;
 
-
-
+// if(language === 'English' && population < 50 && !isIsland){
+//     console.log(`You should live in ${country} `)
+// } else{
+//     console.log(`${country} does not meet your criteria `);
+// }
+    
 
 // The switch Statement //
+// Use a switch statement to log the following string for the given 'language': 
+// chinese or mandarin: 'MOST number of native speakers!' 
+// spanish: '2nd place in number of native speakers' 
+// english: '3rd place' 
+// hindi: 'Number 4' 
+// arabic: '5th most spoken language' 
+// for all other simply log 'Great language too :D' 
 
-const language = 'arabic';
- 
-switch (language) {
+language = 'chinese';
+
+switch (language){
     case 'chinese':
     case 'mandarin':
-        console.log('MOST number of native speakers!');
-        break;
-    case 'spanish':
-        console.log( '2nd place in number of native speakers');
-        break;
-    case 'english':
-        console.log( '3rd place');
-        break;
-    case 'hindi':
-        console.log('Number 4');
-        break;
-    case 'arabic':
-        console.log('5th most spoken language');
-        break;
-    default:
-        console.log('Great language too :D');
+      console.log('MOST number of native speakers!');
+break;
 
+case 'spanish':
+    console.log('2nd place in number of native speakers');
+      break;
+
+case 'english':
+     console.log('3rd place');
+ break;
+
+ case 'hindi':
+       console.log('Number 4');
+ break;
+
+case 'arabic':
+   console.log('5th most spoken language');
+   break
+
+default:
+    console.log('Great language too :D');
 }
 
+//  The Conditional (Ternary) Operator //
 
-// The Conditional(Ternary) Operator //
+const countryPop = population > 33 ? `${country} population is above average` : `${country} population is below average `;
+console.log(countryPop);
 
-const population = 13;
+population > 33 ? console.log(`${country} population is above average`) : console.log(`${country} population is below average `);
 
-const result = population > 33? "Portugal's population is above average":
- "Portugal's population is below average";
- console.log(result);
-
- console.log(`I want to know ${population > 33? "Portugal's population is above average":
- "Portugal's population is below average"}`);
- 
-
- 
- // coding challenge 1 //
-// Data 1//
-const massMark = 78;
-const massJohn = 92;
-const heightMark = 1.69;
-const heightJohn = 1.95;
-
-const BMIMark = massMark / (heightMark * heightMark)
-
-
-const BMIJohn = massJohn / (heightJohn * heightJohn)
-
-
-var markHigherBMI = BMIMark > BMIJohn;
-console.log(markHigherBMI);
-console.log( BMIMark, BMIJohn);
-
-
-
-
-//  Coding challenge 2 // 
-
-if(BMIMark > BMIJohn){
-    console.log(`Mark's BMI ${BMIMark} is higher than John's BMI ${BMIJohn}!`);
-} else {
-    console.log(`John's BMI ${BMIJohn} is higher than Mark's BMI ${BMIMark}!`);
-}
-
-
-
-Coding Challenge 3 //
-
-const scoreDolphins = (96 + 108 + 89)/3;
-const scoreKoalas = (88 + 91 + 10)/3;
-
-
-if (scoreDolphins > scoreKoalas){
-    console.log('Dolpins win the trophy🏆');
-} else if (scoreKoalas > scoreDolphins){
-    console.log('Koalas win the trophy🏆');
-} else if (scoreDolphins === scoreKoalas ){
-    console.log("Both win the trophy");
-} else {
-    console.log('no team win the trophy');
-}
-
-// Bonus 1 //
-
-const scoreDolphins = (97 + 112 + 101)/3;
-const scoreKoalas = (109 + 95 + 106)/3;
-
-
-if (scoreDolphins > scoreKoalas && scoreDolphins >= 100){
-    console.log('Dolpins win the trophy🏆');
-} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100){
-    console.log('Koalas win the trophy🏆');
-} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100){
-    console.log("Both win the trophy");
-} else {
-    console.log('no team win the trophy');
-}
-
-// Coding challenges //
-
-const bill = 275;
-
-const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`);
+console.log(`${country}'s Population ${population > 33 ? 'above' : 'is below'} average`)
 */
 
-// Functions //
-
-function describeCountry(country, population, capitalCity){
-    const countryInfo = `${country} has ${population} million people
-    and its capital city is ${capitalCity}`;
-    return countryInfo;
-}
-
-const somIfo = describeCountry('Somalia', 18, 'Mogadishu');
-console.log(somIfo);
+// Write a program to calculate the area of a rectangle //
