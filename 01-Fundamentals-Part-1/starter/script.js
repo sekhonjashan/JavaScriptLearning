@@ -1,5 +1,6 @@
-let js = "amazing";
-if (js === "amazing") alert("Learning is FUN!");
-else alert("JavaScript is NOT FUN!");
-
-console.log(1+5+3+1+9+9);
+let countryName = "Canada";
+let continentName = "North America";
+let countryPopulation = 37.59;
+console.log(countryName);
+console.log(continentName);
+console.log(countryPopulation+" million");
